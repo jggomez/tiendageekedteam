@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "722367739513",
+    "firebase_url": "https://tiendageekedteam.firebaseio.com",
+    "project_id": "tiendageekedteam",
+    "storage_bucket": "tiendageekedteam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:722367739513:android:33762a7076e15536aa46a8",
+        "android_client_info": {
+          "package_name": "co.devhack.tiendageekedteam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "722367739513-4v3e1e7f1ge84sp0k5et70jlapnjugvr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.devhack.tiendageekedteam",
+            "certificate_hash": "f59176a21a9d42e95849cdae8cac2e25814984fd"
+          }
+        },
+        {
+          "client_id": "722367739513-h6nh3669dqqtq14gqpccio5jccebs2jv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG1rj380Hu1ouLycTzY6DuO6Fb3_sgqm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "722367739513-h6nh3669dqqtq14gqpccio5jccebs2jv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
