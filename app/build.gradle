@@ -37,6 +37,7 @@ dependencies {
 
     // Firebase
     implementation 'com.google.firebase:firebase-core:17.2.0'
+    implementation 'com.google.firebase:firebase-auth:19.0.0'
 
     // ktx
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0-alpha04'
@@ -52,4 +53,5 @@ dependencies {
 
     // Material Dialogs
     implementation 'com.afollestad.material-dialogs:core:3.1.0'
+
 }

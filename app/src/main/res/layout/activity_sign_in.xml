@@ -28,7 +28,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
         <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txt1"
+                android:id="@+id/txtEmail"
                 style="@style/editText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txt2"
+                android:id="@+id/txtPassword"
                 style="@style/editText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
