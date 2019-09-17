@@ -29,6 +29,7 @@ class SignUpActivity : BaseActivity() {
         }
 
         btnSignUp.setOnClickListener {
+<<<<<<< HEAD
             signUp()
         }
 
@@ -58,5 +59,10 @@ class SignUpActivity : BaseActivity() {
         signUpViewModel.createUserWithEmailAndPassword(email, password)
         showProgress()
 
+=======
+            
+        }
+
+>>>>>>> master
     }
 }
