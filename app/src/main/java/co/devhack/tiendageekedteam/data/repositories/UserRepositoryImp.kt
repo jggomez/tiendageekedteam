@@ -56,10 +56,12 @@ class UserRepositoryImp(
                     FirebaseAuth
                         .getInstance()
                         .createUserWithEmailAndPassword(email, password)
-                        .addOnSuccessListener {
+                        .addOnSuccessListener { authResult ->
+                            authResult.user?.sendEmailVerification()
+                            FirebaseAuth.getInstance().signOut()
                             continuation.resume(
                                 Either.Right(
-                                    it.user?.let { firebaseUser ->
+                                    authResult.user?.let { firebaseUser ->
                                         mapToUserEntity(firebaseUser)
                                     }
                                 )
@@ -90,14 +92,25 @@ class UserRepositoryImp(
                     FirebaseAuth
                         .getInstance()
                         .signInWithEmailAndPassword(email, password)
-                        .addOnSuccessListener {
-                            continuation.resume(
-                                Either.Right(
-                                    it.user?.let { firebaseUser ->
-                                        mapToUserEntity(firebaseUser)
-                                    }
+                        .addOnSuccessListener { authResult ->
+                            if (authResult.user?.isEmailVerified == true) {
+                                continuation.resume(
+                                    Either.Right(
+                                        authResult.user?.let { firebaseUser ->
+                                            mapToUserEntity(firebaseUser)
+                                        }
+                                    )
                                 )
-                            )
+                            } else {
+                                continuation.resume(
+                                    Either.Left(
+                                        Failure.ServerError(
+                                            Exception("Email is not verified")
+                                        )
+                                    )
+                                )
+                            }
+
                         }
                         .addOnFailureListener { ex ->
                             continuation.resume(

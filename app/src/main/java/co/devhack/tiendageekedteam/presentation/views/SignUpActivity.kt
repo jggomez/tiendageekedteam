@@ -29,14 +29,12 @@ class SignUpActivity : BaseActivity() {
         }
 
         btnSignUp.setOnClickListener {
-<<<<<<< HEAD
-<<<<<<< HEAD
             signUp()
         }
 
         signUpViewModel.lduser.observe(this, Observer {
             hideProgress()
-            startActivity(Intent(this, ProductsActivity::class.java))
+            startActivity(Intent(this, SignInActivity::class.java))
             finish()
         })
 
@@ -59,16 +57,5 @@ class SignUpActivity : BaseActivity() {
 
         signUpViewModel.createUserWithEmailAndPassword(email, password)
         showProgress()
-
-=======
-            
-        }
-
->>>>>>> master
-=======
-            
-        }
-
->>>>>>> master
     }
 }

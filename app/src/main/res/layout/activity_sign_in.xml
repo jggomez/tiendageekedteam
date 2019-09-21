@@ -92,7 +92,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnSigIn" />
 
-    <!--com.facebook.login.widget.LoginButton
+    <com.facebook.login.widget.LoginButton
             android:id="@+id/btnSignInFacebook"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -105,7 +105,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.526"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnSignInGoogle" /-->
+            app:layout_constraintTop_toBottomOf="@+id/btnSignInGoogle" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
